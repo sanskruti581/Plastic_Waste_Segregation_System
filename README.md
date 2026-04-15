@@ -1,51 +1,52 @@
-# Plastic Waste Segregation System
+# ♻️ Plastic Waste Segregation System
 
-Full-stack application for classifying plastic waste images into:
-`HDPE`, `LDPA`, `Other`, `PET`, `PP`, `PS`, `PVC`.
+## 📌 Project Description
 
-## Project Structure
+The Plastic Waste Segregation System is an AI-powered application designed to automatically classify different types of plastic waste using machine learning techniques. The system aims to improve recycling efficiency by reducing manual sorting and minimizing human error.
 
-```text
-Plastic_waste_seggregation/
-  backend/
-    app.py
-    plastic_model.keras
-    class_names.json
-    requirements.txt
-  frontend/
-    index.html
-    style.css
-    script.js
-```
+Plastic waste is one of the major environmental concerns worldwide. Improper segregation leads to contamination, making recycling difficult and inefficient. This project provides an intelligent solution by integrating computer vision and deep learning to identify plastic types in real time.
 
-## Backend Setup (Flask)
+---
 
-1. Open a terminal in the project root.
-2. Install dependencies:
-   ```powershell
-   pip install -r backend/requirements.txt
-   ```
-3. Start the API:
-   ```powershell
-   python backend/app.py
-   ```
+## 🎯 Objectives
 
-API endpoint:
-- `POST http://127.0.0.1:5000/predict` with form-data key `file`.
+- To develop an automated system for plastic waste classification
+- To reduce human effort in waste segregation
+- To improve accuracy and speed of recycling processes
+- To apply machine learning concepts to solve real-world environmental problems
 
-## Frontend Setup
+---
 
-1. Open `frontend/index.html` in your browser (or serve `frontend/` via any static server).
-2. Upload an image and click **Predict Plastic Type**.
+## ⚙️ System Workflow
 
-The frontend calls:
-- `http://127.0.0.1:5000/predict`
+1. User uploads an image of plastic waste through the web interface
+2. The image is sent to the backend server (Flask API)
+3. The backend preprocesses the image:
+   - Resizes to 224×224 pixels
+   - Normalizes pixel values
+4. The trained ML model predicts the plastic type
+5. The prediction and confidence score are returned to the frontend
+6. The result is displayed to the user
 
-## Prediction Output Format
+---
 
-```json
-{
-  "predicted_class": "PET",
-  "confidence": 0.92
-}
-```
+## 🧠 Machine Learning Approach
+
+- Model Used: MobileNetV2 (Transfer Learning)
+- Framework: TensorFlow / Keras
+- Input: Image (224×224 RGB)
+- Output: Probability distribution over plastic classes
+
+### 📊 Classes:
+- HDPE (High-Density Polyethylene)
+- LDPA (Low-Density Polyethylene)
+- PET (Polyethylene Terephthalate)
+- PP (Polypropylene)
+- PS (Polystyrene)
+- PVC (Polyvinyl Chloride)
+- Other
+
+---
+
+
+### 📁 Folder Structure:
