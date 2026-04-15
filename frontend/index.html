@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plastic Waste Segregation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="nav-content">
+        <a href="#home" class="brand-link">PlasticSeg <span>&#9851;</span></a>
+        <nav class="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#upload" class="nav-link">Upload</a>
+          <a href="#about" class="nav-link">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Plastic Waste Segregation System</h1>
+        <p>AI-powered Plastic Classification for Smart Recycling</p>
+        <button id="tryNowBtn" class="hero-btn" type="button">Try Now</button>
+      </div>
+    </section>
+
+    <main class="page">
+      <section id="upload" class="upload-grid">
+        <section class="surface-card upload-card">
+          <h2>Upload Plastic Image</h2>
+          <p class="section-subtitle">
+            Drop a clear plastic image and let the model classify it instantly.
+          </p>
+
+          <div id="dropZone" class="drop-zone" tabindex="0" role="button">
+            <input id="imageInput" type="file" accept="image/*" />
+            <p class="drop-title">Drag and drop your image here</p>
+            <p class="drop-subtitle">or click to browse</p>
+          </div>
+
+          <div class="upload-controls">
+            <p class="file-name">
+              Selected file: <span id="selectedFileName">No file selected</span>
+            </p>
+            <button id="predictButton" class="predict-btn" type="button">
+              <span id="buttonLabel">Upload &amp; Predict</span>
+              <span id="buttonSpinner" class="spinner hidden"></span>
+            </button>
+          </div>
+
+          <p id="statusMessage" class="status" aria-live="polite"></p>
+        </section>
+
+        <section class="stack-col">
+          <section id="previewSection" class="surface-card preview-card hidden">
+            <h3>Image Preview</h3>
+            <div class="preview-frame">
+              <img id="imagePreview" alt="Uploaded image preview" />
+            </div>
+          </section>
+
+          <section id="resultSection" class="surface-card result-card hidden">
+            <h3>Prediction Result</h3>
+            <div class="result-row">
+              <span>Predicted Type</span>
+              <span id="predictedClass" class="type-badge">-</span>
+            </div>
+            <div class="confidence-area">
+              <div class="confidence-meta">
+                <span>Confidence</span>
+                <span id="confidenceScore" class="confidence-value">-</span>
+              </div>
+              <div class="progress-track">
+                <div id="confidenceFill" class="progress-fill"></div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <section class="features-section">
+        <article class="surface-card feature-card">
+          <div class="feature-icon">&#9889;</div>
+          <h3>Fast Detection</h3>
+          <p>Quick image-to-result workflow designed for practical usage.</p>
+        </article>
+        <article class="surface-card feature-card">
+          <div class="feature-icon">&#127919;</div>
+          <h3>Accurate Classification</h3>
+          <p>Deep learning model predicts plastic category with confidence score.</p>
+        </article>
+        <article class="surface-card feature-card">
+          <div class="feature-icon">&#127793;</div>
+          <h3>Eco-Friendly Solution</h3>
+          <p>Supports smarter recycling decisions and cleaner waste management.</p>
+        </article>
+      </section>
+
+      <section id="about" class="surface-card about-card">
+        <h2>About This Project</h2>
+        <p>
+          Plastic Waste Segregation System is a machine learning-based application
+          that classifies plastic waste into different categories using deep
+          learning techniques. It helps improve recycling efficiency and reduce
+          environmental pollution.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">&copy; 2026 PlasticSeg | Smart Recycling with AI</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
