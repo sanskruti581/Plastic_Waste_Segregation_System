@@ -49,4 +49,3 @@ Plastic waste is one of the major environmental concerns worldwide. Improper seg
 ---
 
 
-### 📁 Folder Structure:
